@@ -1,4 +1,60 @@
-body{
-    background-color: #181717;
-    color: white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+:root{
+    --body-color: #181717;
+    --logo-color: #c99972;
+    --text-color: white;
+}
+
+body{
+    background-color: var(--body-color);
+    color: white;
+    transition: all ease 500ms;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
+    height: 4rem;
+}
+
+.logo{
+    color:var(--logo-color);
+    font-weight: 100;
+    font-size: 2rem;
+}
+.logo span{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.nav-buttons{
+    display: flex;
+    gap: 1rem;
+}
+.nav-buttons button{
+    background-color: var(--logo-color);
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    color: var(--body-color);
+    font-weight: 200;
+    cursor: pointer;
+    border: 1px solid transparent; /* Add border in default state */
+    transition: all ease 300ms;
+}
+
+.nav-buttons button:hover{
+    background-color: transparent;
+    border: 1px solid var(--logo-color);
+    color: var(--logo-color);
+}
+
+
